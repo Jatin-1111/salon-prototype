@@ -1,26 +1,153 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Warm near-black, cream, and a single gold. Three golds exist only because
+     one value cannot be legible on both cream and near-black: `gold` is for
+     dark grounds and button fills, `gold-head` for large gold headings on
+     cream (3.4:1, AA for large text) and `gold-deep` for small gold labels and
+     links on cream (4.6:1). */
+  --color-night: #100d0a;
+  --color-charcoal: #1a1512;
+  --color-espresso: #0b0908;
+  --color-cream: #f7f2e9;
+  --color-card: #ffffff;
+
+  --color-ink: #1c1712;
+  --color-muted: #6e6459;
+  --color-chalk: #f5f1ea;
+  --color-dim: #a79e92;
+
+  --color-gold: #e0b87c;
+  --color-gold-head: #a87c41;
+  --color-gold-deep: #8a6733;
+
+  --color-hairline: #e3dbcd;
+  --color-hairline-dark: #2a231c;
+
+  --font-display: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  --font-script: var(--font-script), cursive;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* The page is dark-first, so native scrollbars and the date picker should
+       be too. The cream sections contain no native controls. */
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* clears the fixed header when jumping to a section */
+    scroll-padding-top: 5.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-night);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-synthesis-weight: none;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background-color: var(--color-gold);
+    color: var(--color-night);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@utility eyebrow {
+  /* The letter-spaced caps that open each section. */
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+@utility btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  border-radius: 2px;
+  padding: 0.9375rem 1.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition:
+    background-color 0.35s ease,
+    border-color 0.35s ease,
+    color 0.35s ease;
+}
+
+/* Scroll reveal. The `js` class is set by an inline script in the document
+   head, so without JavaScript every element stays visible. */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+.js [data-reveal].is-revealed {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) var(--reveal-delay, 0ms),
+    transform 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) var(--reveal-delay, 0ms);
+}
+
+/* The booking dialog. `::backdrop` sits outside the theme cascade, so its
+   colour is written out literally. */
+dialog.booking::backdrop {
+  background-color: rgb(8 6 5 / 0.74);
+  backdrop-filter: blur(3px);
+}
+
+dialog.booking[open] {
+  animation: dialog-in 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+@keyframes dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .js [data-reveal],
+  .js [data-reveal].is-revealed {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
