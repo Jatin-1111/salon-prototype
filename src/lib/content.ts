@@ -2,16 +2,19 @@ export const salon = {
   name: "LOOKS",
   tagline: "Hair | Beauty | You",
   strapline: "Look Good. Feel Better.",
-  location: "Delhi",
+  location: "Chandigarh",
   // TODO: replace every placeholder below with the real details before launch,
   // and update `metadataBase` in src/app/layout.tsx to the custom domain.
   phone: "+91 98765 43210",
   phoneHref: "tel:+919876543210",
   whatsappHref: "https://wa.me/919876543210",
   email: "hello@looksalon.example",
-  address: "DLF Avenue, Saket, New Delhi - 110017",
+  // Chandigarh addresses are sector based and commercial units are numbered
+  // SCO (Shop-Cum-Office); the pincode suffix follows the sector number.
+  address: "SCO 118, Sector 35-C, Chandigarh - 160035",
   hours: "Mon - Sun : 10:00 AM - 9:00 PM",
-  mapsUrl: "https://www.google.com/maps",
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=SCO+118%2C+Sector+35-C%2C+Chandigarh+160035",
   instagram: "https://instagram.com",
   facebook: "https://facebook.com",
   youtube: "https://youtube.com",
@@ -136,7 +139,7 @@ export const reviews: Review[] = [
   },
   {
     quote:
-      "Best salon in Delhi! Loved the personalized consultation and the final look was exactly what I wanted.",
+      "Best salon in Chandigarh! Loved the personalized consultation and the final look was exactly what I wanted.",
     name: "Aman Verma",
     image: "photo-1649433658557-54cf58577c68",
     alt: "",

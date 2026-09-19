@@ -36,12 +36,13 @@ export const metadata: Metadata = {
   description,
   keywords: [
     "hair salon",
-    "salon in Delhi",
+    "salon in Chandigarh",
     "haircut",
     "hair colour",
     "balayage",
     "bridal styling",
-    "Saket",
+    "Sector 35",
+    "Tricity",
   ],
   openGraph: {
     type: "website",
