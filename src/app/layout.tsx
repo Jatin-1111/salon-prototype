@@ -23,25 +23,25 @@ const script = Dancing_Script({
 });
 
 const description =
-  `${salon.name} is a premium hair salon in ${salon.location}. Haircuts, colour, ` +
-  "treatments and occasion styling by expert stylists. Book an appointment online.";
+  `${salon.name} is a top-rated beauty parlour and home salon in ${salon.location}. ` +
+  "Haircuts, permanent hair straightening, nail extensions and doorstep beauty services. Book an appointment online.";
 
 export const metadata: Metadata = {
   // TODO: point this at the custom domain once it is connected.
-  metadataBase: new URL("https://looksalon.example"),
+  metadataBase: new URL("https://yourhomesalon.example"),
   title: {
-    default: `${salon.name} | Premium Hair Salon in ${salon.location}`,
+    default: `${salon.name} | Beauty Parlour & Home Salon in ${salon.location}`,
     template: `%s | ${salon.name}`,
   },
   description,
   keywords: [
-    "hair salon",
+    "beauty parlour",
+    "home salon",
     "salon in Chandigarh",
     "haircut",
-    "hair colour",
-    "balayage",
-    "bridal styling",
-    "Sector 35",
+    "permanent hair straightening",
+    "nail extensions",
+    "Sector 22",
     "Tricity",
   ],
   openGraph: {
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: "/",
     siteName: salon.name,
-    title: `${salon.name} | Premium Hair Salon in ${salon.location}`,
+    title: `${salon.name} | Beauty Parlour & Home Salon in ${salon.location}`,
     description,
   },
   alternates: { canonical: "/" },

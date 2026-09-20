@@ -108,16 +108,16 @@ function Hero() {
       >
         <div className="max-w-xl">
           <p data-reveal className={`eyebrow text-dim ${delay(0)}`}>
-            Premium Hair Salon in {salon.location}
+            Beauty Parlour &amp; Home Salon in {salon.location}
           </p>
 
           <h1
             data-reveal
             className={`mt-7 text-[2.5rem] leading-[1.12] font-bold text-chalk uppercase sm:text-[3.25rem] lg:text-[3.75rem] ${delay(1)}`}
           >
-            Your Hair.
+            Your Beauty.
             <br />
-            Your Style.
+            Your Home.
             <br />
             <span className="text-gold">Our Expertise.</span>
           </h1>
@@ -182,7 +182,7 @@ function Services() {
             data-reveal
             className={`mt-4 text-[2.125rem] leading-tight text-ink sm:text-[2.75rem] ${delay(1)}`}
           >
-            Everything <span className="text-gold-head">Your Hair Needs</span>
+            Everything <span className="text-gold-head">Beauty Needs</span>
           </h2>
           <p
             data-reveal
@@ -253,11 +253,11 @@ function Experience() {
             <br />
             Care
             <br />
-            Looks
+            At Your
             <br />
-            Good
+            Own
             <br />
-            On You
+            Pace
             <span aria-hidden="true" className="mt-5 block h-px w-14 bg-gold/50" />
           </p>
         </div>
@@ -275,14 +275,15 @@ function Experience() {
             >
               More Than a
               <br />
-              <span className="text-gold">Hair Appointment</span>
+              <span className="text-gold">Salon Appointment</span>
             </h2>
             <p
               data-reveal
               className={`mt-5 max-w-md text-[0.9375rem] leading-relaxed text-dim ${delay(2)}`}
             >
-              Step into a space where every detail is designed around you.
-              Relax, refresh and leave feeling more confident.
+              Whether you visit us in Sector 22C or have us come to you,
+              every detail is designed around you. Relax, refresh and leave
+              feeling more confident.
             </p>
 
             <ol className="mt-10 space-y-7">

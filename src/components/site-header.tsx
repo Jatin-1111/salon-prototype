@@ -12,9 +12,8 @@ export function Wordmark({ className = "" }: { className?: string }) {
         {salon.name}
       </span>
       <span className="mt-1.5 block text-[0.5rem] font-medium tracking-[0.34em] text-dim uppercase">
-        Hair <span className="text-dim/50">|</span> Beauty{" "}
-        <span className="text-dim/50">|</span>{" "}
-        <span className="text-gold">You</span>
+        Beauty <span className="text-dim/50">|</span>{" "}
+        <span className="text-gold">Home Salon</span>
       </span>
     </span>
   );

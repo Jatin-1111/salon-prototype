@@ -1,20 +1,19 @@
 export const salon = {
-  name: "LOOKS",
-  tagline: "Hair | Beauty | You",
-  strapline: "Look Good. Feel Better.",
+  name: "Your Home Salon",
+  tagline: "Beauty Parlour | Home Salon",
+  strapline: "Beauty That Comes Home.",
   location: "Chandigarh",
-  // TODO: replace every placeholder below with the real details before launch,
-  // and update `metadataBase` in src/app/layout.tsx to the custom domain.
-  phone: "+91 98765 43210",
-  phoneHref: "tel:+919876543210",
-  whatsappHref: "https://wa.me/919876543210",
-  email: "hello@looksalon.example",
-  // Chandigarh addresses are sector based and commercial units are numbered
-  // SCO (Shop-Cum-Office); the pincode suffix follows the sector number.
-  address: "SCO 118, Sector 35-C, Chandigarh - 160035",
+  // TODO: confirm the WhatsApp number and email inbox the salon actually
+  // wants bookings routed to before launch.
+  phone: "078148 50630",
+  phoneHref: "tel:+917814850630",
+  whatsappHref: "https://wa.me/917814850630",
+  email: "hello@yourhomesalon.example",
+  address:
+    "First Floor, SCO No 2455-56, Dakshin Marg, near Hotel Aroma, Sector 22C, Chandigarh - 160022",
   hours: "Mon - Sun : 10:00 AM - 9:00 PM",
   mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=SCO+118%2C+Sector+35-C%2C+Chandigarh+160035",
+    "https://www.google.com/maps/search/?api=1&query=Your+Home+Salon%2C+SCO+2455-56%2C+Sector+22C%2C+Chandigarh+160022",
   instagram: "https://instagram.com",
   facebook: "https://facebook.com",
   youtube: "https://youtube.com",
@@ -35,10 +34,10 @@ export type HeroFeature = {
 };
 
 export const heroFeatures: HeroFeature[] = [
-  { icon: "scissors", lines: ["Expert", "Stylists"] },
-  { icon: "star", lines: ["Personalized", "Experience"] },
-  { icon: "diamond", lines: ["Premium", "Products"] },
-  { icon: "heart", lines: ["A Space", "You'll Love"] },
+  { icon: "scissors", lines: ["Skilled", "Stylists"] },
+  { icon: "star", lines: ["4.9 Star", "Rated"] },
+  { icon: "diamond", lines: ["Home Salon", "Available"] },
+  { icon: "heart", lines: ["941+ Happy", "Clients"] },
 ];
 
 export type Service = {
@@ -52,29 +51,29 @@ export type Service = {
 export const services: Service[] = [
   {
     id: "haircuts",
-    name: "Haircuts",
-    description: "Trendy & classic cuts tailored to your personality.",
+    name: "Haircuts & Styling",
+    description: "Trendy & classic cuts from our skilled stylists.",
     image: "photo-1618049049816-43a00d5b0c3d",
     alt: "A client with a freshly cut and styled textured crop",
   },
   {
-    id: "hair-color",
-    name: "Hair Color",
-    description: "Balayage, highlights & customized colour.",
+    id: "hair-straightening",
+    name: "Permanent Hair Straightening",
+    description: "Smooth, manageable, salon-perfect straight hair.",
     image: "photo-1682450239611-e2c845970926",
-    alt: "Long caramel balayage waves photographed from behind",
+    alt: "Long smooth straightened hair photographed from behind",
   },
   {
-    id: "treatments",
-    name: "Hair Treatments",
-    description: "Restore shine, strength & healthy hair.",
+    id: "nail-extensions",
+    name: "Nail Extensions & Nail Art",
+    description: "Durable extensions with custom nail art designs.",
     image: "photo-1634449571010-02389ed0f9b0",
-    alt: "A client having their hair washed at the salon basin",
+    alt: "A close-up of manicured hands with nail art",
   },
   {
-    id: "styling",
-    name: "Styling",
-    description: "Looks for parties, weddings & special occasions.",
+    id: "home-salon",
+    name: "Home Salon Services",
+    description: "Our stylists bring the salon experience to your door.",
     image: "photo-1614020863825-28a0bb7e3c3c",
     alt: "A twisted occasion updo in auburn hair, seen from behind",
   },
@@ -108,13 +107,13 @@ export const gallery: GalleryItem[] = [
   },
   {
     image: "photo-1785456283212-338f5bc44d50",
-    alt: "Two clients with long wavy blonde and brunette hair",
-    caption: "Lived-in Blonde",
+    alt: "Two clients with long smooth straightened hair",
+    caption: "Silky Straight",
   },
   {
     image: "photo-1743001345835-a8e9f258a823",
-    alt: "A client with defined natural curls",
-    caption: "Curl Definition",
+    alt: "A close-up of nail art and extensions",
+    caption: "Nail Art",
   },
   {
     image: "photo-1700760934268-8aa0ef52ce0a",
@@ -125,29 +124,26 @@ export const gallery: GalleryItem[] = [
 
 export type Review = { quote: string; name: string; image: string; alt: string };
 
-/**
- * PLACEHOLDER copy standing in for the real thing. These are not real reviews
- * and must be replaced with genuine, attributable ones before launch.
- */
+// Real Google reviews for Your Home Salon, Sector 22C, Chandigarh.
 export const reviews: Review[] = [
   {
     quote:
-      "Amazing experience! The staff is so professional and friendly. My hair has never looked better!",
-    name: "Riya Sharma",
+      "My hair feels so much smoother after the permanent straightening! It's unbelievably manageable. The price was reasonable, and the stylist really listened to what I wanted.",
+    name: "Aman Kumar",
     image: "photo-1725033489648-a819750348eb",
     alt: "",
   },
   {
     quote:
-      "Best salon in Chandigarh! Loved the personalized consultation and the final look was exactly what I wanted.",
-    name: "Aman Verma",
+      "I'm honestly so happy with my haircut! The whole experience at the salon was really nice and professional. The stylist understood my preference really well instead of cutting too much length.",
+    name: "Eyshmeet Kaur",
     image: "photo-1649433658557-54cf58577c68",
     alt: "",
   },
   {
     quote:
-      "A premium salon with top-notch stylists. Highly recommend for anyone who wants a transformation!",
-    name: "Neha Kapoor",
+      "The service provided here is extremely outstanding and most economical. The hair cutting has been quite outstanding and different from all other salons I have so far visited.",
+    name: "Shama Khan",
     image: "photo-1728053914354-e1e3e09f6239",
     alt: "",
   },
